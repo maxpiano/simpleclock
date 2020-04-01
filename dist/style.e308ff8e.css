@@ -67,7 +67,8 @@ body {
 }
 
 .hand {
-  background: #e60000;
+  /* background: #e60000; */
+  background: blue;
   position: absolute;
   transform-origin: bottom;
   transition: all 0.12s;

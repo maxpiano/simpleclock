@@ -1,0 +1,16 @@
+name: deploy to surge
+
+on: push
+
+jobs:
+  my-job:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to foo-bar.surge.sh
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: 'foo-bar.surge.sh'
+          project: '.dist/'
+          login: max@bilov.de
+          token: b4b1400f7c07ed0528dcd51878e9df7a

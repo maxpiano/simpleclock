@@ -13,6 +13,5 @@ jobs:
         with:
           node-version: 8
       - run: npm install -g surge parcel-bundler
-      - run: npm
       - run: parcel build index.html
       - run: surge dist/ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}

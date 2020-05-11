@@ -1,1 +1,1 @@
-## Awesome JS Clock
+Simple Clock written in HTML, CSS and JS

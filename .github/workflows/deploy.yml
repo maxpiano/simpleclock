@@ -1,6 +1,9 @@
-name: Deploy Website
+name: Deploy to Surge
 
-on: [push]
+on:
+  push:
+    paths:
+    - 'dist/**'
 
 jobs:
   build:
@@ -12,6 +15,5 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 8
-      - run: npm install -g surge parcel-bundler
-      - run: parcel build index.html
+      - run: npm install -g surge
       - run: surge dist/ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
